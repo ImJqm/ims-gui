@@ -57,16 +57,15 @@ public class Inventory {
             return;
         }
         // same with negative quantity
-        if (prod.getQuantity() < 0) {
-            System.out.print("Error: Negative Quantity");
-            return;
-        }
 
         // iterates through products
         for (Product p : this.listings) {
             // if existing product already has the same pid, add combine the quantities
             if (p.getProductID().equals(prod.getProductID())) {
                 p.setQuantity(p.getQuantity() + prod.getQuantity());
+                if (p.getQuantity() < 0) {
+                    p.setQuantity(0);
+                }
                 System.out.println(
                     "Updated quantity of product with pid " +
                         prod.getProductID()

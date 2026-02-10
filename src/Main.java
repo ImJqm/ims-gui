@@ -352,11 +352,15 @@ public class Main extends JPanel {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     try {
-                        if (
-                            Double.valueOf(price.getText()) < 0 ||
-                            Integer.valueOf(quantity.getText()) < 0
-                        ) {
-                            throw new NumberFormatException("Negative Input");
+                        boolean exists = inv.search(pid.getText()).size() != 0 ;
+                        if (exists) {
+                          if (Double.valueOf(price.getText()) < 0 || (inv.search(pid.getText()).get(0).getQuantity()+Integer.valueOf(quantity.getText())<0)) {
+                              throw new NumberFormatException("Negative Input");
+                          }
+                        } else {
+                          if (Double.valueOf(price.getText()) < 0 || Integer.valueOf(quantity.getText()) < 0) {
+                              throw new NumberFormatException("Negative Input");
+                          }
                         }
                         inv.addProduct(
                             new Product(
