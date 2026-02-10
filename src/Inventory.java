@@ -139,11 +139,44 @@ public class Inventory {
             System.out.println(
                 "Couldn't find product with product ID \"" + productID + "\""
             );
+
+            try {
+                Process proc = Runtime.getRuntime().exec(
+                    new String[] {
+                        "/bin/bash",
+                        "-c",
+                        SRC_DIR +
+                        "notify.sh \"" +
+                        "With ID " +
+                        productID +
+                        "\" \"Couldn't find product\"",
+                    }
+                );
+                proc.waitFor();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         } else {
             System.out.println(
                 "Removed product with product ID " + "\"" + productID + "\""
             );
             this.listings.remove(index);
+            try {
+                Process proc = Runtime.getRuntime().exec(
+                    new String[] {
+                        "/bin/bash",
+                        "-c",
+                        SRC_DIR +
+                        "notify.sh \"" +
+                        "With ID " +
+                        productID +
+                        "\" \"Removed Product\"",
+                    }
+                );
+                proc.waitFor();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         // writes to inventory.json
         this.write();
