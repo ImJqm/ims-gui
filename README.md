@@ -3,6 +3,8 @@
 
 This is a gui-based version of my java inventory management System
 
+*Currently only works for Mac OS file Systems*
+
 ## Current Features
 
 - Add/Remove Products
@@ -13,7 +15,7 @@ This is a gui-based version of my java inventory management System
 - Remove product bvy product ID
 - Mac OS Notification Daemon Integration
 
-*Currently only works for Mac OS file Systems*
+
 
 ## TODO:
 
