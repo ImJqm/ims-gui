@@ -20,6 +20,7 @@ https://github.com/user-attachments/assets/540df96b-7653-4f65-b916-92b2208fb922
 - Persistent storage between uses via Gson
 - Remove product bvy product ID
 - Mac OS Notification Daemon Integration
+- Negative Quantity Decrements
 
 
 
