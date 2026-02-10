@@ -1,9 +1,15 @@
 
-# IMG-GUI
+# IMS-GUI
 
 This is a gui-based version of my java inventory management System
 
 *Currently only works for Mac OS file Systems*
+
+## Demo
+
+
+https://github.com/user-attachments/assets/540df96b-7653-4f65-b916-92b2208fb922
+
 
 ## Current Features
 
