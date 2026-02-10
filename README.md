@@ -1,5 +1,5 @@
 
-# IMG-GUI
+# IMS-GUI
 
 This is a gui-based version of my java inventory management System
 
